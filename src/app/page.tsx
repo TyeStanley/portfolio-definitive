@@ -1,4 +1,5 @@
 import { User, Briefcase, Mail, Linkedin, Github, FileText } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -17,24 +18,35 @@ export default function Home() {
 
         {/* Action buttons */}
         <div className="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <button className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300">
+          <Link
+            href="/about"
+            className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300"
+          >
             <User className="mr-2 h-5 w-5" />
             About
-          </button>
-          <button className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300">
+          </Link>
+          <Link
+            href="/portfolio"
+            className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300"
+          >
             <Briefcase className="mr-2 h-5 w-5" />
             Portfolio
-          </button>
-          <button className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300">
+          </Link>
+          <Link
+            href="/contact"
+            className="btn btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content rounded-lg border-2 bg-white/30 px-8 py-3 transition-all duration-300"
+          >
             <Mail className="mr-2 h-5 w-5" />
             Contact
-          </button>
+          </Link>
         </div>
 
         {/* Social links */}
         <div className="flex justify-center space-x-4">
           <a
             href="https://www.linkedin.com/in/tyestanley/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-circle btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content border-2 bg-white/30 transition-all duration-300"
             aria-label="LinkedIn"
           >
@@ -42,6 +54,8 @@ export default function Home() {
           </a>
           <a
             href="https://github.com/TyeStanley"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-circle btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content border-2 bg-white/30 transition-all duration-300"
             aria-label="GitHub"
           >
@@ -49,6 +63,8 @@ export default function Home() {
           </a>
           <a
             href="/Tye_Stanley_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-circle btn-outline btn-primary hover:bg-primary hover:text-primary-content active:bg-primary active:text-primary-content focus:bg-primary focus:text-primary-content border-2 bg-white/30 transition-all duration-300"
             aria-label="Resume"
           >
