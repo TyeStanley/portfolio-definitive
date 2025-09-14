@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
+import PageTransition from '@/components/PageTransition';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -27,8 +28,10 @@ export default function RootLayout({
         {/* White overlay to reduce background distraction */}
         <div className="fixed inset-0 bg-white/30" />
 
-        {/* Content */}
-        <div className="relative z-10">{children}</div>
+        {/* Content with page transitions */}
+        <div className="relative z-10 overflow-hidden">
+          <PageTransition>{children}</PageTransition>
+        </div>
       </body>
     </html>
   );
