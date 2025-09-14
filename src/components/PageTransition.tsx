@@ -1,43 +1,22 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import { ReactNode, useRef, useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface PageTransitionProps {
   children: ReactNode;
 }
 
-// Define page order for animation direction
+// Define page order for animation direction (vertical flow)
 const pageOrder = ['/', '/about', '/portfolio', '/contact'];
 
 export default function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname();
-  const previousPathnameRef = useRef(pathname);
+  const [isVisible, setIsVisible] = useState(false);
+  const [previousPath, setPreviousPath] = useState(pathname);
 
-  // Animation variants
-  const pageVariants = {
-    initial: {
-      x: '100%',
-      opacity: 0,
-    },
-    in: {
-      x: 0,
-      opacity: 1,
-    },
-    out: (direction: number) => ({
-      x: direction > 0 ? '-100%' : '100%',
-      opacity: 0,
-    }),
-  };
-
-  const pageTransition = {
-    type: 'tween' as const,
-    ease: 'anticipate' as const,
-    duration: 0.5,
-  };
-
-  // Determine animation direction based on page order
+  // Get animation direction based on page order
   const getDirection = (currentPath: string, prevPath: string) => {
     const currentIndex = pageOrder.indexOf(currentPath);
     const prevIndex = pageOrder.indexOf(prevPath);
@@ -46,30 +25,48 @@ export default function PageTransition({ children }: PageTransitionProps) {
     return currentIndex - prevIndex;
   };
 
-  const direction = getDirection(pathname, previousPathnameRef.current);
+  const direction = getDirection(pathname, previousPath);
 
-  // Update the ref after direction calculation
+  // Vertical sliding animation variants
+  const pageVariants = {
+    hidden: {
+      opacity: 0,
+      y: direction > 0 ? '100%' : '-100%', // Slide up from bottom or down from top
+      scale: 0.95,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'anticipate',
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Reset animation on pathname change
   useEffect(() => {
-    previousPathnameRef.current = pathname;
+    setIsVisible(false);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      setPreviousPath(pathname);
+    }, 50);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
-  // look at sync and other options
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <AnimatePresence mode="wait" custom={direction}>
-        <motion.div
-          key={pathname}
-          custom={direction}
-          variants={pageVariants}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit="out"
-          transition={pageTransition}
-          className="absolute inset-0 z-10 w-full opacity-0"
-        >
-          {children}
-        </motion.div>
-      </AnimatePresence>
+    <div className="relative min-h-screen overflow-y-hidden">
+      <motion.div
+        variants={pageVariants}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        className="absolute inset-0 w-full"
+      >
+        {children}
+      </motion.div>
     </div>
   );
 }

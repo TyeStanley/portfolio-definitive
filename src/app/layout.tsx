@@ -29,7 +29,7 @@ export default function RootLayout({
         <div className="fixed inset-0 bg-white/30" />
 
         {/* Content with page transitions */}
-        <div className="relative z-10 overflow-hidden">
+        <div className="relative z-10">
           <PageTransition>{children}</PageTransition>
         </div>
       </body>
