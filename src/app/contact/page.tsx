@@ -1,9 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Send } from 'lucide-react';
+import { Send, CheckCircle, XCircle } from 'lucide-react';
 import PageWrapper from '@/components/PageWrapper';
 import { contactFields } from '@/constants/contact';
 
@@ -23,6 +24,9 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function Contact() {
+  const [successMessage, setSuccessMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
   const {
     register,
     handleSubmit,
@@ -39,14 +43,26 @@ export default function Contact() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSuccessMessage('');
+      setErrorMessage('');
 
-      console.log('Form submitted:', data);
-      alert("Message sent successfully! I'll get back to you soon.");
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
+
+      setSuccessMessage("Message sent successfully! I'll get back to you soon.");
       reset();
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error sending your message. Please try again.');
+    } catch {
+      setErrorMessage('There was an error sending your message. Please try again.');
     }
   };
 
@@ -59,6 +75,21 @@ export default function Contact() {
             Get in Touch
           </span>
         </h1>
+
+        {/* Success/Error Messages */}
+        {successMessage && (
+          <div className="alert alert-success mb-6">
+            <CheckCircle className="h-5 w-5" />
+            <span>{successMessage}</span>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div className="alert alert-error mb-6">
+            <XCircle className="h-5 w-5" />
+            <span>{errorMessage}</span>
+          </div>
+        )}
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -84,7 +115,7 @@ export default function Contact() {
                 <textarea
                   {...register(field.id as keyof ContactFormData)}
                   placeholder={field.placeholder}
-                  className={`textarea textarea-bordered w-full ${
+                  className={`textarea textarea-bordered w-full focus:outline-none ${
                     errors[field.id as keyof ContactFormData] ? 'textarea-error' : ''
                   }`}
                   rows={field.rows || 4}
@@ -94,7 +125,7 @@ export default function Contact() {
                   type={field.type}
                   {...register(field.id as keyof ContactFormData)}
                   placeholder={field.placeholder}
-                  className={`input input-bordered w-full ${
+                  className={`input input-bordered w-full focus:outline-none ${
                     errors[field.id as keyof ContactFormData] ? 'input-error' : ''
                   }`}
                 />
