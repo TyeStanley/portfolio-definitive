@@ -24,7 +24,7 @@ export default function PortfolioItem({ item, onClick }: PortfolioItemProps) {
           alt={item.title}
           width={300}
           height={300}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
         />
       </div>
     </motion.div>
