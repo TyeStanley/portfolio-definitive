@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Tye Stanley - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website showcasing professional software engineering skills and projects. Built with cutting-edge web technologies to demonstrate expertise in full-stack development, UI/UX design, and modern web development practices.
 
-First, run the development server:
+## 🌐 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**🔗 [View Live Website](https://tyestanley.com/)**
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Key Highlights](#-key-highlights)
+- [Performance & Optimization](#-performance--optimization)
+- [Contact](#-contact)
+
+## ✨ Features
+
+- **Responsive Design**: Mobile-first approach with seamless experience across all devices
+- **Interactive Animations**: Smooth transitions and micro-interactions using Framer Motion
+- **Modern UI/UX**: Clean, professional design with DaisyUI components and Tailwind CSS
+- **Portfolio Showcase**: Interactive project gallery with detailed modals
+- **Contact Form**: Functional contact system with email integration
+- **SEO Optimized**: Server-side rendering and meta tags for better search visibility
+- **Type Safety**: Full TypeScript implementation for robust development
+- **Performance**: Optimized images, lazy loading, and efficient bundle splitting
+
+## 🛠 Technologies Used
+
+### Frontend
+
+- **React 19** - Latest React with concurrent features
+- **Next.js 15** - Full-stack React framework with App Router
+- **TypeScript** - Type-safe JavaScript development
+- **Tailwind CSS** - Utility-first CSS framework
+- **DaisyUI** - Component library for rapid development
+- **Framer Motion** - Production-ready animation library
+- **Lucide React** - Beautiful, customizable icons
+
+### Backend & APIs
+
+- **Next.js API Routes** - Serverless API endpoints
+- **Resend** - Email service integration
+- **React Hook Form** - Form handling and validation
+- **Zod** - Schema validation
+
+### Development Tools
+
+- **ESLint** - Code linting and quality assurance
+- **Prettier** - Code formatting
+- **Turbopack** - Fast bundling and development
+
+## 📁 Project Structure
+
+```text
+src/
+├── app/                   # Next.js App Router pages
+│   ├── about/             # About page with skills showcase
+│   ├── contact/           # Contact form page
+│   ├── portfolio/         # Portfolio gallery page
+│   └── api/               # API routes
+├── components/            # Reusable React components
+│   ├── Navbar.tsx         # Navigation component
+│   ├── PortfolioItem.tsx  # Portfolio card component
+│   ├── PortfolioModal.tsx # Project detail modal
+│   └── TechSection.tsx    # Technology showcase
+├── constants/             # Data and configuration
+│   ├── portfolio.ts       # Portfolio projects data
+│   ├── contact.ts         # Contact information
+│   └── categories/        # Technology categories
+├── hooks/                 # Custom React hooks
+└── util/                  # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+
+- npm, yarn, pnpm, or bun
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/TyeStanley/portfolio-definitive.git
+   cd portfolio-definitive
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 🎯 Key Highlights
+
+### Technical Excellence
+
+- **Modern React Patterns**: Hooks, context, and custom hooks for state management
+- **TypeScript Mastery**: Comprehensive type safety throughout the application
+- **Performance Optimization**: Image optimization, code splitting, and lazy loading
+- **Responsive Design**: Mobile-first approach with breakpoint-specific layouts
+- **Accessibility**: Semantic HTML and ARIA attributes for screen readers
+
+### Code Quality
+
+- **Clean Architecture**: Well-organized component structure and separation of concerns
+- **Reusable Components**: Modular design with composable UI elements
+- **Custom Hooks**: Abstracted logic for modal management and page transitions
+- **Type Safety**: Comprehensive TypeScript interfaces and type definitions
+
+### User Experience
+
+- **Smooth Animations**: Framer Motion for professional-grade transitions
+- **Interactive Elements**: Hover effects, loading states, and micro-interactions
+- **Fast Loading**: Optimized images and efficient bundle splitting
+- **Cross-Platform**: Consistent experience across desktop, tablet, and mobile
+
+## ⚡ Performance & Optimization
+
+- **Next.js 15**: Latest framework features with improved performance
+- **Turbopack**: Fast development builds and hot reloading
+- **Image Optimization**: Next.js Image component with automatic optimization
+- **Code Splitting**: Automatic route-based code splitting
+- **SEO Ready**: Server-side rendering and meta tag optimization
+- **Bundle Analysis**: Optimized JavaScript bundles for faster loading
+
+## 👨‍💻 About the Developer
+
+**Tye Stanley** - Software Engineer & UT University Graduate
+
+- **Full-Stack Developer** with expertise in modern web technologies
+- **Frontend Specialist** in React, TypeScript, and responsive design
+- **Backend Experience** with Node.js, Express.js, .NET, and API development
+- **UI/UX Focus** on creating engaging, accessible user experiences
+- **Continuous Learner** always exploring new technologies and best practices
+
+## 📞 Contact
+
+- **Portfolio**: [tyestanley.com](https://tyestanley.com/)
+- **LinkedIn**: [linkedin.com/in/tyestanley](https://www.linkedin.com/in/tyestanley/)
+- **GitHub**: [github.com/TyeStanley](https://github.com/TyeStanley)
+- **Email**: Available through contact form on website
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+⭐ **Star this repository** if you found it helpful for your own portfolio or learning journey!
