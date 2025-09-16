@@ -41,7 +41,7 @@ export default function About() {
             </h1>
             <div className="text-base-content/70 mb-1 flex items-center justify-center gap-2 sm:justify-start">
               <Cog className="text-accent h-4 w-4" />
-              <span className="text-sm font-medium">Software Engineer</span>
+              <span className="text-sm font-medium">Software Developer</span>
             </div>
             <div className="text-base-content/70 flex items-center justify-center gap-2 sm:justify-start">
               <Award className="text-accent h-4 w-4" />

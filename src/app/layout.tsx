@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Tye Stanley - Software Engineer',
-  description: 'Software Engineer specializing in modern web development and full-stack solutions',
+  title: 'Tye Stanley - Software Developer',
+  description: 'Software Developer specializing in modern web development and full-stack solutions',
 };
 
 export default function RootLayout({

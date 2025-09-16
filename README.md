@@ -155,7 +155,7 @@ npm start
 
 ## 👨‍💻 About the Developer
 
-**Tye Stanley** - Software Engineer & UT University Graduate
+**Tye Stanley** - Software Developer & UT University Graduate
 
 - **Full-Stack Developer** with expertise in modern web technologies
 - **Frontend Specialist** in React, TypeScript, and responsive design

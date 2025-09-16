@@ -17,9 +17,9 @@ export default function Home() {
       >
         <main className="-mt-5 flex min-h-screen flex-col items-center justify-center px-6">
           <div className="text-center">
-            {/* Software Engineer subtitle */}
+            {/* Software Developer subtitle */}
             <h2 className="text-primary mb-4 text-xl font-medium drop-shadow-lg">
-              Software Engineer
+              Software Developer
             </h2>
 
             {/* Main title */}
