@@ -19,4 +19,14 @@ export const portfolioItems: PortfolioItem[] = [
     websiteUrl: 'https://tyestanley.com/',
     sourceUrl: 'https://github.com/TyeStanley/portfolio-definitive',
   },
+  {
+    id: 'xphub',
+    title: 'XPHUB - Liquid Bulk Transport',
+    description:
+      'A modern, responsive website showcasing professional web development skills through a fictional liquid bulk transport company. Features an interactive quote system, comprehensive service showcase, customer testimonials carousel, and professional UI/UX design. Built with React, Next.js, and TypeScript to demonstrate full-stack development capabilities, form validation, email integration, and SEO optimization.',
+    image: '/portfolio/xphub.png',
+    technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+    websiteUrl: 'https://xphub.us/',
+    sourceUrl: 'https://github.com/TyeStanley/xphub',
+  },
 ];
