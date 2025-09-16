@@ -145,14 +145,14 @@ export function usePageTransition(): UsePageTransitionReturn {
         visible: {
           opacity: 1,
           transition: {
-            duration: 0.5,
-            staggerChildren: 0.1,
+            duration: 0.25,
+            staggerChildren: 0.05,
           },
         },
         exit: {
           opacity: 0,
           transition: {
-            duration: 0.3,
+            duration: 0.2,
           },
         },
       };
@@ -195,14 +195,14 @@ export function usePageTransition(): UsePageTransitionReturn {
         x: 0,
         y: 0,
         transition: {
-          duration: 0.5,
-          staggerChildren: 0.1,
+          duration: 0.25,
+          staggerChildren: 0.05,
         },
       },
       exit: {
         ...getExitPosition(exitDir),
         transition: {
-          duration: 0.3,
+          duration: 0.2,
         },
       },
     };
@@ -243,7 +243,7 @@ export function usePageTransition(): UsePageTransitionReturn {
     setIsExiting(true);
     setTimeout(() => {
       router.push(href);
-    }, 300);
+    }, 200);
   };
 
   return {
