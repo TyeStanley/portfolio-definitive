@@ -19,7 +19,7 @@ export default function Portfolio() {
           <div className="via-accent mb-4 h-px bg-gradient-to-r from-transparent to-transparent" />
 
           {/* Scrollable container */}
-          <div className="scrollbar-hide flex gap-4 overflow-x-auto pb-4">
+          <div className="scrollbar-none flex gap-4 overflow-x-auto pb-4">
             {portfolioItems.map((item, index) => (
               <motion.div
                 key={item.id}
