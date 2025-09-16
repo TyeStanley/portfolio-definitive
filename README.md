@@ -1,6 +1,6 @@
 # 🚀 Tye Stanley - Portfolio Website
 
-A modern, responsive portfolio website showcasing professional software engineering skills and projects. Built with cutting-edge web technologies to demonstrate expertise in full-stack development, UI/UX design, and modern web development practices.
+A modern, responsive portfolio website showcasing professional software development skills and projects. Built with cutting-edge web technologies to demonstrate expertise in full-stack development, UI/UX design, and modern web development practices.
 
 ## 🌐 Live Demo
 

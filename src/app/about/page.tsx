@@ -54,8 +54,8 @@ export default function About() {
         <div className="mx-auto mb-10 max-w-4xl">
           <div className="bg-base-200/50 group hover:bg-base-200/70 relative overflow-hidden rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-lg sm:p-8">
             <p className="text-base-content/90 text-base leading-relaxed sm:text-lg">
-              Established and driven software engineer applying Full Stack Developer background with
-              a strong drive to improve/learn skill sets in relation to creating full-fledged
+              Established and driven software developer applying Full Stack Developer background
+              with a strong drive to improve/learn skill sets in relation to creating full-fledged
               websites with high performance and strong optimization. I have graduated from the
               Bootcamp program and obtained my certificate in full stack web development from UT
               University.
