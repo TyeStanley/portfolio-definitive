@@ -56,9 +56,10 @@ export default function About() {
             <p className="text-base-content/90 text-base leading-relaxed sm:text-lg">
               Established and driven software developer applying Full Stack Developer background
               with a strong drive to improve/learn skill sets in relation to creating full-fledged
-              websites with high performance and strong optimization. I have graduated from the
-              Bootcamp program and obtained my certificate in full stack web development from UT
-              University.
+              websites with high performance and strong optimization. As a former teaching
+              assistant, I mentored students in web development, helping them master modern
+              technologies and best practices. I have graduated from the Bootcamp program and
+              obtained my certificate in full stack development from UT University.
             </p>
           </div>
         </div>
