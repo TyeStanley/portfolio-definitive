@@ -29,4 +29,14 @@ export const portfolioItems: PortfolioItem[] = [
     websiteUrl: 'https://xphub.us/',
     sourceUrl: 'https://github.com/TyeStanley/xphub',
   },
+  {
+    id: 'lunatune',
+    title: 'Lunatune - Music Streaming Platform',
+    description:
+      'A sophisticated, full-stack music streaming application with advanced audio processing and real-time visualization. Features dual-audio system with seamless crossfading, interactive audio visualizer, playlist management, and comprehensive playback controls. Built with React, Next.js, Redux Toolkit, and Web Audio API, demonstrating advanced frontend development skills with 90%+ test coverage and production-ready architecture.',
+    image: '/portfolio/lunatune-app.png',
+    technologies: ['TypeScript', 'Next.js', 'Redux Toolkit', 'Web Audio API'],
+    websiteUrl: 'https://lunatune-app.vercel.app/',
+    sourceUrl: 'https://github.com/TyeStanley/lunatune-app',
+  },
 ];
