@@ -43,9 +43,9 @@ export const portfolioItems: PortfolioItem[] = [
     id: 'lunatune-api',
     title: 'Lunatune - Backend API',
     description:
-      'A robust, scalable .NET 8 Web API backend for a music streaming platform. Features enterprise-grade authentication, playlist management, and cloud storage integration. Powers a React/Next.js frontend with comprehensive API documentation and production-ready security.',
+      'A robust, scalable .NET Web API backend for a music streaming platform. Features enterprise-grade authentication, playlist management, and cloud storage integration. Powers a React/Next.js frontend with comprehensive API documentation and production-ready security.',
     image: '#',
-    technologies: ['.NET 8', 'ASP.NET Core', 'Entity Framework Core'],
+    technologies: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core'],
     websiteUrl: 'https://lunatune-app.vercel.app/',
     sourceUrl: 'https://github.com/TyeStanley/lunatune-api',
   },
