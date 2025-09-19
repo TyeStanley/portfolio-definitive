@@ -39,7 +39,7 @@ export default function PortfolioModal({ item, isOpen, onClose }: PortfolioModal
         <div className="flex flex-col lg:flex-row">
           {/* Screenshot Section */}
           <div className="lg:w-1/2">
-            <div className="relative h-64 sm:h-80 lg:h-auto">
+            <div className="relative h-64 sm:h-80 lg:h-full">
               <Image
                 src={item.image}
                 alt={item.title}
